@@ -128,6 +128,7 @@ DS.RESTAdapter = DS.Adapter.extend({
 
     this.ajax("/" + plural, "GET", {
       data: { ids: ids },
+      traditional: true,
       success: function(json) {
         store.loadMany(type, ids, json[plural]);
       }
