@@ -133,6 +133,16 @@ DS.attr.transforms = {
     }
   },
 
+  json: {
+    from: function(serialized) {
+      return Ember.none(serialized) ? null : serialized;
+    },
+
+    to: function(deserialized) {
+      return Ember.none(deserialized) ? null : deserialized;
+    }
+  },
+
   date: {
     from: function(serialized) {
       var type = typeof serialized;
